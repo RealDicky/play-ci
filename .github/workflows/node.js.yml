@@ -12,8 +12,13 @@ on:
 jobs:
   build:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     
     steps:
-     - uses: actions/checkout@v2
-     - run: docker-compose up -d
+     - |
+       ssh root@192.112.101.8 "
+        cd ~/project/play-ci
+        git pull
+        
+        docker-compose up --build -d
+       "
