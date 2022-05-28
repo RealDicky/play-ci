@@ -21,5 +21,8 @@ jobs:
       with:
         OSS_KEY: ${{ secrets.OSS_KEY }}
         OSS_SECRET: ${{ secrets.OSS_SECRET }}
-    - run: docker-compose up --build -d
+    - run: |
+      export OSS_KEY=$OSS_KEY
+      export OSS_SECRET=$OSS_SECRET
+      docker-compose up --build -d
         
