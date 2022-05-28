@@ -8,8 +8,6 @@ ENV PUBLIC_URL https://play-ci.oss-cn-hangzhou.aliyuncs.com
 
 WORKDIR play-ci
 
-RUN echo $(${OSS_KEY})
-
 RUN wget http://gosspublic.alicdn.com/ossutil/1.7.7/ossutil64 -O /usr/local/bin/ossutil \
   && chmod 755 /usr/local/bin/ossutil \
   && ossutil config -i $OSS_KEY -k $OSS_SECRET -e $ENDPOINT
