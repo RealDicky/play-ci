@@ -6,8 +6,8 @@ services:
       dockerfile: Dockerfile
       args:
         # 此处默认从宿主机(host)环境变量中传参
-        OSS_KEY: ${env.$OSS_KEY}
-        OSS_SECRET: ${env.$OSS_SECRET}
+        OSS_KEY: ${env.OSS_KEY}
+        OSS_SECRET: ${env.OSS_SECRET}
         ENDPOINT: oss-cn-hangzhou.aliyuncs.com
     ports:
       - 4000:80
