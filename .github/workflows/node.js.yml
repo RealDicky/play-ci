@@ -15,11 +15,15 @@ jobs:
     runs-on: self-hosted
     
     name: build
-      
+
     steps:
-    - uses: actions/checkout@v2
-    - run: |
-      echo "OSS_KEY=secrets.OSS_KEY" >> $GITHUB_ENV
-      echo "OSSOSS_SECRET_KEY=secrets.OSS_SECRET" >> $GITHUB_ENV
-    - run: docker-compose up --build -d
+    
+    - name: Set the value
+      - run: |
+        echo "{OSS_KEY=${{secrets.OSS_KEY}}}" >> $GITHUB_ENV
+        echo "OSSOSS_SECRET_KEY=${{secrets.OSS_SECRET}}" >> $GITHUB_ENV
+
+    - name: build-action
+      - uses: actions/checkout@v2
+      - run: docker-compose up --build -d
         
