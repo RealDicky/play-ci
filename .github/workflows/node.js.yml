@@ -18,11 +18,8 @@ jobs:
       
     steps:
     - uses: actions/checkout@v2
-      with:
+      env:
         OSS_KEY: ${{ secrets.OSS_KEY }}
         OSS_SECRET: ${{ secrets.OSS_SECRET }}
-    - run: |
-      export OSS_KEY=$OSS_KEY
-      export OSS_SECRET=$OSS_SECRET
-      docker-compose up --build -d
+    - run: docker-compose up --build -d
         
