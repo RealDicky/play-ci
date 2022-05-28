@@ -9,6 +9,7 @@
     "oss:cli": "ossutil cp -rf --meta Cache-Control:no-cache build oss://play-ci/ && ossutil cp -rf --meta Cache-Control:max-age=31536000 build/static oss://play-ci/static"
   },
   "dependencies": {
+    "@types/node": "^17.0.36",
     "vue": "^3.2.25"
   },
   "devDependencies": {
