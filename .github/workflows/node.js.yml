@@ -13,13 +13,13 @@ jobs:
   build:
 
     runs-on: self-hosted
-    
+    env:
+      OSS_KEY: ${{ secrets.OSS_KEY }}
+      OSS_SECRET: ${{ secrets.OSS_SECRET }}   
     name: build
       
     steps:
     - uses: actions/checkout@v2
-      env:
-        OSS_KEY: ${{ secrets.OSS_KEY }}
-        OSS_SECRET: ${{ secrets.OSS_SECRET }}
+
     - run: docker-compose up --build -d
         
