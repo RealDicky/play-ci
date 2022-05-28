@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        OSS_KEY: ${{ secret.OSS_KEY }}
-        OSS_SECRET: ${{ secret.OSS_SECRET }}
+        OSS_KEY: ${{ secrets.OSS_KEY }}
+        OSS_SECRET: ${{ secrets.OSS_SECRET }}
     - run: docker-compose up --build -d
         
