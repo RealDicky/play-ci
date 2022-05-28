@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        run: docker-compose up --build -d
+      - run: docker-compose up --build -d
         env:
           OSS_KEY: ${{ github.OSS_KEY }}
           OSS_SECRET: ${{ github.OSS_SECRET }}
