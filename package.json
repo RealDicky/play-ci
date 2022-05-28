@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "oss:cli": "ossutil cp -rf --meta Cache-Control:no-cache build oss://play-ci/ && ossutil cp -rf --meta Cache-Control:max-age=31536000 build/static oss://play-ci/static"
+    "oss:cli": "ossutil cp -rf --meta Cache-Control:no-cache build oss://play-ci/ && ossutil cp -rf --meta Cache-Control:max-age=31536000 build/assets oss://play-ci/assets"
   },
   "dependencies": {
     "@types/node": "^17.0.36",
