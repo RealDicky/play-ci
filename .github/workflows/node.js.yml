@@ -17,13 +17,10 @@ jobs:
     name: build
 
     steps:
-
-    - name: Set the value
-      run: |
-        echo "{OSS_KEY=${{secrets.OSS_KEY}}}" >> $GITHUB_ENV
-        echo "OSSOSS_SECRET_KEY=${{secrets.OSS_SECRET}}" >> $GITHUB_ENV
-
     # - uses: actions/checkout@v2
+    - name: Deploy
 
     - run: docker-compose up --build -d
-        
+      env:
+        OSS_KEY: ${{ github.OSS_KEY }}
+        OSS_SECRET: ${{ github.OSS_SECRET }}
