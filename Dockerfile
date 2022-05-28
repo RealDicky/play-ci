@@ -10,7 +10,7 @@ WORKDIR play-ci
 
 RUN wget http://gosspublic.alicdn.com/ossutil/1.7.7/ossutil64 -O /usr/local/bin/ossutil \
   && chmod 755 /usr/local/bin/ossutil \
-  && ossutil config -i $OSS_KEY_ -k $OSS_SECRET -e $ENDPOINT
+  && ossutil config -i $OSS_KEY -k $OSS_SECRET -e $ENDPOINT
 
 # 单独分离 package.json，是为了安装依赖可最大限度利用缓存
 ADD package.json yarn.lock /play-ci/
