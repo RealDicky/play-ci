@@ -23,7 +23,7 @@ jobs:
         echo "{OSS_KEY=${{secrets.OSS_KEY}}}" >> $GITHUB_ENV
         echo "OSSOSS_SECRET_KEY=${{secrets.OSS_SECRET}}" >> $GITHUB_ENV
 
-    - uses: actions/checkout@v2
+    # - uses: actions/checkout@v2
 
     - run: docker-compose up --build -d
         
