@@ -4,10 +4,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      args:
+      environment:
         # 此处默认从宿主机(host)环境变量中传参
-        OSS_KEY: ${OSS_KEY}
-        OSS_SECRET: ${OSS_SECRET}
-        ENDPOINT: oss-cn-hangzhou.aliyuncs.com
+        - OSS_KEY=${OSS_KEY}
+        - OSS_SECRET=${OSS_SECRET}
+        - ENDPOINT=oss-cn-hangzhou.aliyuncs.com
     ports:
       - 4000:80
