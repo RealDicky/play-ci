@@ -5,13 +5,13 @@
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  change form server and test ci
+  change form server and test ci1
 </template> 
 
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;https://github.com/RealDicky/play-ci/blob/main/src/App.vue
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
